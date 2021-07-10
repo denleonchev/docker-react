@@ -7,4 +7,4 @@ before_install:
 
 
 script:
-  - docker run backpack812/docker-react npm run test -- --coverage
+  - docker run backpack812/docker-react npm run test -- --coverage --watch=false
