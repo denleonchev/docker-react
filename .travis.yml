@@ -7,7 +7,16 @@ before_install:
 
 script:
   - docker run backpack812/docker-react npm run test -- --coverage --watchAll=false
-  - zip -r build *
-  - mkdir -p codeDeploy
-  - mv build.zip codeDeploy/build.zip
-  - ls codeDeploy
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: "docker-react"
+  evn: "Dockerreact-env"
+  bucket_name: "elasticbeanstalk-us-east-2-674034146380"
+  bucket_path: "docker"
+  on:
+    branch: main
+  access_key_id: $ACCESS_KEY_ID
+  secret_access_key:
+    secure: "$SECRET_ACCESS_KEY"
