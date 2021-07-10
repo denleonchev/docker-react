@@ -1,23 +1,21 @@
 sudo: required
 services:
-  - docker
-
+- docker
 before_install:
-  - docker build -t backpack812/docker-react -f Dockerfile.dev .
-
+- docker build -t backpack812/docker-react -f Dockerfile.dev .
 script:
-  - docker run backpack812/docker-react npm run test -- --coverage --watchAll=false
-
+- docker run backpack812/docker-react npm run test -- --coverage --watchAll=false
 deploy:
   provider: elasticbeanstalk
   region: us-east-2
-  app: "docker-react"
-  evn: "Dockerreact-env"
-  bucket_name: "elasticbeanstalk-us-east-2-674034146380"
-  bucket_path: "docker"
+  app: docker-react
+  evn: Dockerreact-env
+  bucket_name: elasticbeanstalk-us-east-2-674034146380
+  bucket_path: docker
   on:
     branch: main
-  access_key_id: 
-    secure: "$ACCESS_KEY_ID"
+  access_key_id:
+    secure: "kN1VACkXAObZ+F+wq4rkbshZgF0gEpRfYncC92Fx031/1/ZYeybQFoJZ3INpUoUa2h2xK6Tp8DCUhKb/LD+FggWy/Vnj6i4Go7LzRG6IvUcOfDJZxQ/9u00GNKa8s3i16J8KbL5tU8IrrUZY+2nL28UeCQO/kzXtYqxbpziBr0r85bjUhNAypgWsaRYaytqQYc/phVlOUn01pBOgn0FbCoVdSKDHnMSOpK11A+i9yGqHLa2E7mbMkAd+++JvtUgBlI/IXdJ9YEdGXeMJSEBMlzNTDpTlAvPPPb2lC2xpvFjSSikgG8oDBNayKCeOKtxiO23YOaEYFCW1KjeVHFpyg5kbHeEsXRxxgCeqDy9+3gDQRKjRMbXQXTcrH3ye/jGnAqqKZWgzTlJ4+akLYT2Ha8138I+s5y0mL7iOQynCRDmyQ/sRhiumcI5cWfPXGdjgvZpk/9vfx0+krwFQikU/FibKyTYpoKB5ky36M/4bAWOJi0Tig+ptwFSlNrO0FIOfEun+xlXZksdAAeibTusn27xIenXXDmHXOtzUi6sdkRHht8OFPldmV+/AvWV4h2EIcf4JSPxof3SwFEHvSGXdFOM2I/SaR43bpS7ZZH4196l+CB9Dpqlp7ycewJ4x3MX6MtG5DbMZIbiMii+LALJKMgynfuB7EhIxg7grFuHEHyQ="
   secret_access_key:
-    secure: "$SECRET_ACCESS_KEY"
+    secure: "SZs376FPNKQgt0iFM/KVsI4/vSMZLRnxxpXZ8fK6DH2XMspLu+ihidq9Iu+OXvlwjv+bdVHzG0XU5zSJgxV6W5FGGGHM8CFZH0lr2LOJitGXIf3BD00nmH/twLhDjrf3PiuT7u7eTp/zi5+l/t/QijPqYf3wxvIyIzVhg+rDtq4i21GDstpcDoRiN3xqXQ2aRJ4Nh5AI8X36KPxgFHj5YrgVLEeVVYOtye9+GtNtKWGPQADxB59rLOGwSj3RP/Kwz37J/xfI9PpfUneh3JCEqRQENkacO3xANp7mJOKpZx6avR5nK2w9sjKVknS1Qe2H1rcv5hwT6oVEujMSIyUBeNvJ4/SOcv6dep3R7lAYNYZWDyUJxkVoOCGPgqcfdN4ST/I4EsQTXVbhlFIcrKQeVp+zp2EXtM6nuABymONJZAiRplZiNugoikFPBsbCyflBm4Gpv6a28lEDneF4cQif6HsBWtPiVXPeQAHb3AmdBt2fT6SPgOxXXx9VCvoyZaGEUuBUTSn8S3HmA1UGe44eY9d221yjFU2EEYbDzq6iOsSpPLBz4lyE2qKQsqbm3Ve90hEsPk6EVXdNYepA8uuAr+OKzYa7FMw+IOJr8FCichP6MoXT5zhjSkY8jzN1jel845Bzt3jMj5JgsA/sC3JdHia2Q00FfNUeVY7HCuqoWYw="
+    
