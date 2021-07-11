@@ -11,7 +11,7 @@ deploy:
   secret_access_key:
     secure: 2abXMKvPAjvLWLJ3o89NEVGLPYR2az4GYncldn1IL+mH/6zGFhUcY47WTvNZUC37hF2qQpjniwvgvZpu+xVlyH9zJgoUvqZI1kP/QZsWgFsfJI1PVfoiuq90iOP30bZG8nMv6r3Fgcr/oxGQn+qv8YciTa7TAdsHrFHODLD/tHaL7OOgG5fmsquKeY4vzdJ07EIcq8zmkt+tQ+rAaP5/pnaLNrO7V0Z/1FHCMPHieQrfcYJ2ue5BCvxw9Ou8n08mj10ZPqK5YMI2NvaiV4X2ZI45hFEaxXGM9f5dB9IDxJQji9ZaWxa4ubt4mao1ntj5A51b/a2UtRQ2nBLDPplfg/EEJuMQhwnTs0LmRInAZsKoja4p5uXmlv+NzOrHXp332KX0Pm4/gDc5F6YNRAHpFKFwew9tUs14e3l3cIDlrDw6xFw2bkmdnYhc+hHdX2+A8jfURhMGsJSbQE/bjmhHF6jF5cnHLch/63DfT86r+qkjjRRaFp/bpKyXi3QVP64A4lK/Wo1vY7Kfob6elzpDeVLmPcFdDMqMlAFCt9pEiFPu3xvf8AhFl+5N0NH9ZTLlKwpl1u5FHquJJ+NmpbPcG8zSEupFTpYa4ickBMOibvZB2X2hHeF7sZd5hmhtBAKXnCaXpsIpk58APHr9gvC7pBCZyrL2XEFq67GwUs+kaOQ=
   region: us-east-2
-  app: docker-react
+  app: docker-frontend
   env: Dockerfrontend-env
   bucket_name: elasticbeanstalk-us-east-2-674034146380
   on:
